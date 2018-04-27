@@ -38,7 +38,7 @@ For example :
 MN01 144.217.161.212:25676 5aT4BojnsqsFNqBkA2296iQBSoeWTKHZ3gXqzZcnJQuXdrqjG1W ff6ec4ed0e3a3504c6028afac755aefb4734755579c07073abd408bb33b0c11b 0
 
 9. Save & Exit **Masternode.conf** 
-10. Restart Desire Wallet  
+10. Restart Seraph Wallet  
 11. Click **Start All** in Masternode tab
 12. (optional) If you want to work in the debug console, type "startmasternode alias 0 MN01"
 13. If you encounter some error messages, please check 'masternode.conf' in desktop wallet
