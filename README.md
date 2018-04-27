@@ -1,6 +1,6 @@
 # SERAPHcoin
 
-Shell script to install a [Desire Masternode] on a Linux server running Ubuntu 16.04. Use it on your own risk.  
+Shell script to install a [Seraph Masternode] on a Linux server running Ubuntu 16.04. Use it on your own risk.  
 
 ***
 
