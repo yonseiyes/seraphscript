@@ -46,16 +46,16 @@ MN01 144.217.161.212:25676 5aT4BojnsqsFNqBkA2296iQBSoeWTKHZ3gXqzZcnJQuXdrqjG1W f
 9. Save & Exit **Masternode.conf** 
 10. Restart Seraph Wallet  
 11. Click **Start All** in Masternode tab
-12. (optional) If you want to work in the debug console, type "startmasternode alias 0 MN01"
+12. (optional but preferable) If you want to work in the debug console, type "startmasternode alias 0 MN01"
 13. If you encounter some error messages, please check 'masternode.conf' in desktop wallet
 
 
 ***
 ## Update 
-    cd ~/seraph;
-    git pull;
-    cd src;
-    ./seraph-cli stop;
+    cd ~/seraph
+    git pull
+    cd src
+    ./seraph-cli stop
     make -f makefile.unix
 
 and Run daemon
