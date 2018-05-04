@@ -7,17 +7,17 @@ Shell script to install a [Seraph Masternode] on a Linux server running Ubuntu 1
 ## Installation:  
 Copy & Paste below in Command line of VPS server & Press 'Enter'
 
-  git clone https://github.com/yonseiyes/seraphscript.git ; cd seraphscript ; chmod +x seraphscript ; ./seraphscript ;
+    git clone https://github.com/yonseiyes/seraphscript.git ; cd seraphscript ; chmod +x seraphscript ; ./seraphscript ;
 
 While compiling, do not type 'enter key(=return key)'
 
-  When you encounter '> enter rpcuser : ' type any username
+  When you encounter ' > enter rpcuser : ' type any username
   
-  next you encounter '> enter rpcpassword :' type any password ( different from rpcuser)
+  next you encounter ' > enter rpcpassword :' type any password ( different from rpcuser)
 
 when compiling is completed, type as below
 
-  nano ~/.seraph/seraph.conf
+    nano ~/.seraph/seraph.conf
 
     <- add masternodeprivkey in seraph.conf 
     you can obtain masternodeprivkey by typing 'masternode genkey' on debug console of desktop wallet
