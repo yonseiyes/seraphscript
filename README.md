@@ -32,7 +32,7 @@ After the MN is up and running, you need to configure the desktop wallet accordi
 5. Go to **Tools -> "Debug Console"**  
 6. Type the following command: **masternode outputs**  
 7. Open **Masternodes.conf** file  
-8. fill the next items
+8. fill the next items ( They should be on one line )
 * Alias: **MN01** 
 * Address: **VPS_IP:PORT**  
 * Privkey: **Masternode Private Key**   **which is shown by typing 'masternode genkey' on debug console of desktop wallet.**
