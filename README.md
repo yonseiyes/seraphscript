@@ -59,4 +59,5 @@ MN01 144.217.161.212:25676 5aT4BojnsqsFNqBkA2296iQBSoeWTKHZ3gXqzZcnJQuXdrqjG1W f
     make -f makefile.unix
 
 and Run daemon
+
     ./seraphd
