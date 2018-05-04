@@ -15,7 +15,7 @@ While compiling, do not type 'enter key(=return key)'
   
   next you encounter '> enter rpcpassword :' type any password ( different from rpcuser)
 
-when compiling is completed, type as blow
+when compiling is completed, type as below
 
   nano ~/.seraph/seraph.conf
 
