@@ -9,7 +9,13 @@ Copy & Paste below in Command line of VPS server & Press 'Enter'
 
   git clone https://github.com/yonseiyes/seraphscript.git ; cd seraphscript ; chmod +x seraphscript ; ./seraphscript ;
 
-when compiling is completed
+While compiling, do not type 'enter key(=return key)'
+
+  When you encounter '> enter rpcuser : ' type any username
+  
+  next you encounter '> enter rpcpassword :' type any password ( different from rpcuser)
+
+when compiling is completed, type as blow
 
   nano ~/.seraph/seraph.conf
 
