@@ -1,13 +1,33 @@
 # SERAPH
 #!/bin/bash
 cd ..
-
-#sudo touch /var/swap.img
-#sudo chmod 600 /var/swap.img
-#sudo dd if=/dev/zero of=/var/swap.img bs=1024k count=2000
-#sudo mkswap /var/swap.img
-#sudo swapon /var/swap.img
-#sudo echo "/var/swap.img none  swap  sw  0 0" >> /etc/fstab
+echo && sleep 3
+read -e -p "Add swap space? (Recommended) [Y/n] : " add_swap
+if [[ ("$add_swap" == "y" || "$add_swap" == "Y" || "$add_swap" == "") ]]; then
+    read -e -p "Swap Size [2G] : " swap_size
+    if [[ "$swap_size" == "" ]]; then
+        swap_size="2G"
+    fi
+fi    
+# Add swap if needed
+if [[ ("$add_swap" == "y" || "$add_swap" == "Y" || "$add_swap" == "") ]]; then
+    if [ ! -f /swapfile ]; then
+        echo && echo "Adding some swap space..."
+        sleep 3
+        sudo fallocate -l $swap_size /swapfile
+        sudo chmod 600 /swapfile
+        sudo mkswap /swapfile
+        sudo swapon /swapfile
+        echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+        sudo sysctl vm.swappiness=10
+        sudo sysctl vm.vfs_cache_pressure=50
+        echo 'vm.swappiness=10' | sudo tee -a /etc/sysctl.conf
+        echo 'vm.vfs_cache_pressure=50' | sudo tee -a /etc/sysctl.conf
+    else
+        echo && echo "Swap file detected, we don't need it- skipping the swap!"
+        sleep 3
+    fi
+fi
 
 sudo apt-get update -y
 sudo apt-get upgrade -y
