@@ -70,7 +70,7 @@ rpcpassword=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
 externalip=$(hostname -i | awk '{print $2}')
 #masternodekey=$(./seraph-cli masternode genkey)
 ./seraph-cli stop
-echo -e "rpcuser=$rpcuser\nrpcpassword=$rpcpassword\nrpcallowip=127.0.0.1\nlisten=1\nserver=1\ndaemon=1\nrpcport=25674\nstaking=0\nexternalip=$externalip:25676\nmaxconnections=256\nmasternode=1\nmasternodeprivkey=$masternodekey" >> $HOME/.seraph/seraph.conf
+echo -e "rpcuser=$rpcuser\nrpcpassword=$rpcpassword\nrpcallowip=127.0.0.1\nlisten=1\nserver=1\ndaemon=1\nrpcport=25674\nstaking=0\nexternalip=$externalip:25676\nmaxconnections=256\nmasternode=1\nmasternodeprivkey=$key" >> $HOME/.seraph/seraph.conf
 echo "Masternode private key: $key"
 ./seraphd -daemon
 
