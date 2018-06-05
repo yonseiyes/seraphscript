@@ -48,3 +48,5 @@ MN01 144.217.161.212:25676 5aT4BojnsqsFNqBkA2296iQBSoeWTKHZ3gXqzZcnJQuXdrqjG1W f
 and Run daemon
 
     ./seraphd
+
+That's all! Enjoy your Masternode!! - written by 돔말(dommal)
