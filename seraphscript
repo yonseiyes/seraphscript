@@ -1,11 +1,9 @@
 # SERAPH
 #!/bin/bash
 cd ..
-# Check for systemd
-systemctl --version >/dev/null 2>&1 || { echo "systemd is required. Are you using Ubuntu 16.04?"  >&2; exit 1; }
-echo && sleep 3
+
 # Gather input from user
-read -e -p "Masternode Private Key (e.g. 7edfjLCUzGczZi3JQw8GHp434R9kNY33eFyMGeKRymkB56G4324h) : " key
+read -e -p "Masternode Private Key (e.g. 5FBze4taSwYNkAWQAurPn6rBi7VeisdejYq9JQchHuRzHDuCYZG) : " key
 if [[ "$key" == "" ]]; then
     echo "WARNING: No private key entered, exiting!!!"
     echo && exit
