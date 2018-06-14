@@ -7,7 +7,7 @@ Shell script to install a [Seraph Masternode] on a Linux server running Ubuntu 1
 ## Installation:  
 Copy & Paste below in Command line of VPS server & Press 'Enter'
 
-    git clone https://github.com/yonseiyes/seraphscript.git ; cd seraphscript ; chmod +x seraphscript ; ./seraphscript ;
+    git clone https://github.com/yonseiyes/seraphscript.git ; cd seraphscript ; bash ./seraphscript ;
 
 ## Desktop wallet setup  
 
