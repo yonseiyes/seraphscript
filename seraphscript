@@ -9,7 +9,7 @@ if [[ "$key" == "" ]]; then
     echo && exit
 fi
 sleep 3
-read -e -p "Hello! Please input your VPS Server IP Address without port(e.g. 147.29.113.19 ) " ip
+read -e -p "Please input your VPS Server IP Address without port(e.g. 147.29.113.19 ) " ip
 echo && sleep 3
 
 read -e -p "Add swap space? (Recommended) [Y/n] : " add_swap
