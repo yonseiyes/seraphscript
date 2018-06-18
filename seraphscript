@@ -59,11 +59,6 @@ cd src
 ./seraphd -daemon
 sleep 10
 
-#  read -p " > Enter rpcuser : " rpcuser
-#  echo
-#  read -p " > Eneter rpcpassword : " rpcpassword
-#  echo
-
 rpcuser=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
 rpcpassword=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
 externalip=$(curl -s ipv4bot.whatismyipaddress.com)
