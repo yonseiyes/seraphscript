@@ -9,7 +9,17 @@ if [[ "$key" == "" ]]; then
     echo && exit
 fi
 sleep 3
-read -e -p "Please input your VPS Server IP Address without port(e.g. 147.29.113.19 ) " ip
+if [ -n "$publicip" ]; then
+    echo -e "${YELLOW}IP Address detected:" $publicip ${NC}
+else
+    echo -e "${RED}ERROR:${YELLOW} Public IP Address was not detected!${NC} \a"
+    clear_stdin
+    read -e -p "Enter VPS Public IP Address: " publicip
+    if [ -z "$publicip" ]; then
+        echo -e "${RED}ERROR:${YELLOW} Public IP Address must be provided. Try again...${NC} \a"
+        exit 1
+    fi
+fi
 echo && sleep 3
 
 read -e -p "Add swap space? (Recommended) [Y/n] : " add_swap
